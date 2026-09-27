@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>Minha IA</title>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Minha IA</h1>
+      <span id="status">Modo local • sem API paga</span>
+    </div>
+    <button id="newChat" class="icon">＋</button>
+  </header>
+
+  <main id="chat"></main>
+
+  <section id="memoryPanel" class="panel hidden">
+    <h2>Memória</h2>
+    <p>Informações que você escolher guardar ficam somente neste aparelho.</p>
+    <div id="memoryList"></div>
+    <button id="clearMemory" class="danger">Apagar memórias</button>
+  </section>
+
+  <footer>
+    <div class="tools">
+      <button id="fileBtn" title="Arquivo">📎</button>
+      <button id="cameraBtn" title="Câmera">📷</button>
+      <button id="micBtn" title="Falar">🎙️</button>
+      <button id="memoryBtn" title="Memória">🧠</button>
+      <input id="fileInput" type="file" hidden multiple
+             accept=".txt,.md,.csv,.json,.html,image/*,application/pdf">
+      <input id="cameraInput" type="file" hidden accept="image/*" capture="environment">
+    </div>
+    <div class="composer">
+      <textarea id="input" rows="1" placeholder="Digite uma mensagem..."></textarea>
+      <button id="send" class="send">➤</button>
+    </div>
+    <small>O assistente local não usa sua chave de API nem cobra por mensagens.</small>
+  </footer>
+
+<script src="app.js"></script>
+</body>
+</html>
